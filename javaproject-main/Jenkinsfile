@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'git@github.com:Namra629/javaproject-main.git'
+                git branch: 'main', url:  git 'git@github.com:Namra629/javaproject-main.git', credentialsId: 'remote_ssh_private_key'
             }
         }
 
